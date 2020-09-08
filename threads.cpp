@@ -20,8 +20,6 @@ int main() {
     t[i] = thread(call_from, i);
   }
 
-  // Print from main thread
-  call_from(10);
 
   // Wait for all threads to complete (in order)
   for (int i = 0; i < 10; i++) {
