@@ -33,16 +33,17 @@ int main(int argc, char *argv[]) {
 
   // Pack these values together into a string
   int buffer_len = 150;
-  char buffer[buffer_len];
+  char buffer[hello];
   sprintf(buffer, "Hello, MPI! Rank: %d Total: %d Machine: %s", rank, size,
           name);
 
   // Synchronize so we can remove interleaved output
   if (rank == 0) {
     // Always print from rank 0
-    cout << buffer << endl;
+    //cout << buffer << endl;
     for (int i = 1; i < size; i++) {
       // Takes buffer, size, type, source, tag, communicator, and status
+      // i , i mpi source and mpi tag
       MPI_Recv(buffer, buffer_len, MPI_CHAR, MPI_ANY_SOURCE, MPI_ANY_TAG,
                MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 

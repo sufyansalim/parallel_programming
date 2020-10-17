@@ -7,6 +7,8 @@ using std::cout;
 using std::endl;
 using std::thread;
 using std::lock_guard;
+
+//Our lock at global scope
 std::mutex my_mutex;
 
 void print_func(int id){
@@ -16,7 +18,7 @@ void print_func(int id){
     //my_mutex.unlock();
 };
 
-//This function s the entrypoint for our thread
+//This function is the entrypoint for our thread
 int main(){
     //Create 4 threads an call print function
     thread t0(print_func,0);

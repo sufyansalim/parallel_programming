@@ -1,4 +1,4 @@
-//g++ call_from.cpp -lpthread -o call_from.exe
+//g++ threads.cpp -lpthread -o threads.exe
 #include <iostream>
 #include <thread>
 

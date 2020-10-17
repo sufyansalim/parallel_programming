@@ -1,5 +1,5 @@
-//mpic++ -o mpi mpi.cpp -----single
-//mpirun -np 4 ./mpi
+//mpic++ -o mpiexe mpi.cpp
+//mpirun -np 4 ./mpi.exe
 #include <iostream>
 #include <mpi.h>
 

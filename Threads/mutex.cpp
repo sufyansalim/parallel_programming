@@ -1,4 +1,4 @@
-//g++ call_from.cpp -lpthread -o call_from.exe
+//g++ mutex.cpp -lpthread -o mutex.exe
 #include <iostream>
 #include <thread>
 #include <mutex>
